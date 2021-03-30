@@ -1,30 +1,112 @@
 <script lang="ts">
-	export let name: string;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <h1>Web Design Snippets!</h1>
+  <p>Welcome to web design snippets!</p>
+
+  <h4>The first snippet</h4>
+
+  <div class="wrap">
+    <h1>Glassmorphism</h1>
+    <div class="drop drop1">
+      <div class="drop drop2" />
+      <div class="drop drop3" />
+      <div class="drop drop4" />
+    </div>
+  </div>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  :root {
+    background: linear-gradient(
+      90deg,
+      #ffff00 6%,
+      #ffa500 25%,
+      #f14444 45%,
+      #d53567 55%,
+      #9a109a 94%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  .wrap {
+    position: relative;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  h1 {
+    font-family: Arial;
+    color: #fff;
+    font-size: 90px;
+    padding: 20px 30px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+  }
+
+  main {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    top: 11px;
+    left: 280px;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 4;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .drop {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .drop1 {
+    width: 47%;
+    height: 150px;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .drop2 {
+    width: 40px;
+    height: 40px;
+    top: -30px;
+    left: -80%;
+    right: 0;
+    z-index: 4;
+  }
+
+  .drop3 {
+    width: 60px;
+    height: 60px;
+    top: 120px;
+    right: 30px;
+    z-index: 3;
+  }
+
+  .drop4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -55px;
+    right: 20px;
+  }
 </style>
